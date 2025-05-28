@@ -1,0 +1,2 @@
+# CasualShooting
+Vibe coding study
