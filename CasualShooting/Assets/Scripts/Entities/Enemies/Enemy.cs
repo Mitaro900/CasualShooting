@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class Enemy : Entity
 {
-    public void InitEnemy(int _power)
+    [SerializeField] private int rewardScore = 100;
+
+    public void Init(int _power)
     {
         power = _power;
         UpdatePowerText();
@@ -10,7 +12,7 @@ public class Enemy : Entity
 
     protected override void Die()
     {
-        GameManager.Instance.AddScore(100);
+        GameManager.Instance.AddScore(rewardScore);
         base.Die();
     }
 

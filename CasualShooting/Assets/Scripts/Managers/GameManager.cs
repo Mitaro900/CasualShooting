@@ -4,7 +4,8 @@ using UnityEngine;
 public class GameManager : SingletonComponent<GameManager>
 {
     private int score;
-    public int difficultyLevel = 1; // 게임 난이도 레벨
+    public int DifficultyLevel { get; set; } = 1; // 게임 난이도 레벨
+    public bool IsFirstWave { get; set; } = true;
 
     #region Singleton
     protected override void AwakeInstance()

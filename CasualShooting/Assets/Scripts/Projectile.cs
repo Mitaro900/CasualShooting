@@ -14,7 +14,7 @@ public class Projectile : MonoBehaviour
 
     private void Update()
     {
-        rb.linearVelocity = transform.forward * moveSpeed;
+        rb.linearVelocity = transform.forward * moveSpeed * GameManager.Instance.DifficultyLevel;
     }
 
     public void InitProjectile(float _moveSpeed, int _damage)

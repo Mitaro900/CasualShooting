@@ -15,7 +15,7 @@ public class PlayerController : Entity
         pos.x = Mathf.Clamp(pos.x, minX, maxX);
         transform.position = pos;
 
-        Vector3 move = Vector3.forward * scrollSpeed * Time.deltaTime;
+        Vector3 move = Vector3.forward * scrollSpeed * GameManager.Instance.DifficultyLevel * Time.deltaTime;
         transform.position += move;
         Camera.main.transform.position += move;
     }

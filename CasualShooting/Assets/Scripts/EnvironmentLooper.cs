@@ -15,7 +15,6 @@ public class EnvironmentLooper : MonoBehaviour
         if (transform.position.z + GroundLength < Camera.main.transform.position.z)
         {
             transform.position = new Vector3(transform.position.x, 0f, transform.position.z + GroundLength);
-            GameManager.Instance.difficultyLevel++; // 게임 난이도 증가
         }
     }
 }

@@ -6,7 +6,8 @@ public enum OperationType
     Add,
     Subtract,
     Multiply,
-    Divide
+    Divide,
+    COUNT
 }
 
 public class Item : MonoBehaviour
@@ -21,7 +22,7 @@ public class Item : MonoBehaviour
         itemMaterial = GetComponentInChildren<Renderer>().material;
     }
 
-    public void InitItem(OperationType _operationType, int _value)
+    public void Init(OperationType _operationType, int _value)
     {
         operationType = _operationType;
         value = _value;
